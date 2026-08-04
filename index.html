@@ -117,6 +117,53 @@ Start Learning
 
 
 <div class="container">
+    <div class="card" id="tutor">
+
+<h2>🤖 Ask Mentora AI</h2>
+
+<p>
+Enter your math question and get step-by-step help.
+</p>
+
+<input 
+id="questionBox"
+type="text"
+placeholder="Example: Solve 3x + 4 = 16"
+style="
+width:90%;
+padding:15px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+">
+
+<br><br>
+
+<button 
+onclick="askMentora()"
+style="
+background:#4a6cf7;
+color:white;
+border:none;
+padding:15px 30px;
+border-radius:25px;
+font-size:16px;
+">
+
+Ask Mentora
+
+</button>
+
+
+<div class="chat" id="responseArea">
+
+<div class="message">
+Mentora AI is ready to help!
+</div>
+
+</div>
+
+    </div>
 <div class="card">
 
 <h2>👋 Welcome Back, Student!</h2>
@@ -252,6 +299,35 @@ covering science, history, coding, languages, and more.
 © 2026 Mentora AI — The Future of Learning
 </footer>
 
+<script>
 
+function askMentora(){
+
+let question = document.getElementById("questionBox").value;
+
+let response = document.getElementById("responseArea");
+
+
+if(question==""){
+
+response.innerHTML =
+"<div class='message'>Please enter a question first.</div>";
+
+}
+
+else {
+
+response.innerHTML =
+"<div class='message'>You asked: "
++ question +
+"</div>" +
+
+"<div class='message'>Mentora AI: Let's solve this step-by-step together. First, identify what information we know and what we need to find.</div>";
+
+}
+
+}
+
+</script>
 </body>
 </html>
