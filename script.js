@@ -154,3 +154,35 @@ pages.forEach(page => {
     page.style.transition = "opacity 0.3s ease";
 
 });
+// Hamburger Menu
+
+const menuButton = document.getElementById("menuButton");
+const sideMenu = document.getElementById("sideMenu");
+
+
+if (menuButton && sideMenu) {
+
+    menuButton.addEventListener("click", () => {
+
+        sideMenu.classList.toggle("open");
+
+    });
+
+}
+
+
+// Close menu after selecting a page
+
+navButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        if (sideMenu) {
+
+            sideMenu.classList.remove("open");
+
+        }
+
+    });
+
+});
