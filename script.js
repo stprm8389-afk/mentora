@@ -1,166 +1,59 @@
-// Mentora AI Application Script
+// Page Navigation
 
-
-// Page Navigation System
-
-const navButtons = document.querySelectorAll(".nav-btn");
+const buttons = document.querySelectorAll(".nav-btn");
 const pages = document.querySelectorAll(".page");
 
 
-function showPage(pageId) {
+buttons.forEach(button => {
 
-    pages.forEach(page => {
+    button.addEventListener("click", () => {
 
-        page.classList.remove("active");
-
-    });
+        const targetPage = button.getAttribute("data-page");
 
 
-    const selectedPage = document.getElementById(pageId);
+        // Hide all pages
+        pages.forEach(page => {
+
+            page.classList.remove("active");
+
+        });
 
 
-    if (selectedPage) {
+        // Show selected page
+        const selectedPage = document.getElementById(targetPage);
 
-        selectedPage.classList.add("active");
+        if(selectedPage){
 
-    }
-
-
-    navButtons.forEach(button => {
-
-        button.classList.remove("active");
-
-        if (button.dataset.page === pageId) {
-
-            button.classList.add("active");
+            selectedPage.classList.add("active");
 
         }
 
-    });
 
-}
+        // Update active button
+        buttons.forEach(btn => {
 
+            btn.classList.remove("active");
 
-
-navButtons.forEach(button => {
-
-
-    button.addEventListener("click", function() {
+        });
 
 
-        const page = this.dataset.page;
-
-
-        showPage(page);
+        button.classList.add("active");
 
 
     });
-
 
 });
 
 
 
-// Start on Home page
 
-showPage("home");
-
-// Mentora AI Tutor Demo
-
-
-function askMentora() {
-
-
-    const question = document.getElementById("questionBox").value;
-
-    const responseArea = document.getElementById("responseArea");
-
-
-
-    if (question.trim() === "") {
-
-        responseArea.innerHTML = `
-        <div class="message">
-        Please enter a question so I can help you learn.
-        </div>
-        `;
-
-        return;
-
-    }
-
-
-
-    let response = "";
-
-
-
-    if (question.includes("3x") || question.includes("equation")) {
-
-
-        response = `
-        Step 1: Start with the equation.
-
-        3x + 4 = 16
-
-        Step 2: Subtract 4 from both sides.
-
-        3x = 12
-
-        Step 3: Divide both sides by 3.
-
-        x = 4
-
-        Great job! Keep practicing.
-        `;
-
-
-    } else {
-
-
-        response = `
-        I can help you understand:
-
-        • Mathematics
-        • Science
-        • English
-        • History
-        • Computer Science
-        • Life Skills
-
-        Try asking me a specific question!
-        `;
-
-    }
-
-
-
-    responseArea.innerHTML = `
-
-    <div class="message">
-
-    ${response}
-
-    </div>
-
-    `;
-
-
-}
-// Add smooth page transitions
-
-pages.forEach(page => {
-
-    page.style.transition = "opacity 0.3s ease";
-
-});
 // Hamburger Menu
 
 const menuButton = document.getElementById("menuButton");
 const sideMenu = document.getElementById("sideMenu");
 
 
-if (menuButton && sideMenu) {
+if(menuButton && sideMenu){
 
     menuButton.addEventListener("click", () => {
 
@@ -171,13 +64,14 @@ if (menuButton && sideMenu) {
 }
 
 
-// Close menu after selecting a page
 
-navButtons.forEach(button => {
+// Close menu when selecting a page
+
+buttons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        if (sideMenu) {
+        if(sideMenu){
 
             sideMenu.classList.remove("open");
 
@@ -186,3 +80,30 @@ navButtons.forEach(button => {
     });
 
 });
+
+
+
+
+// AI Tutor Demo
+
+function askMentora(){
+
+    const question = document.getElementById("questionBox").value;
+
+    const response = document.getElementById("responseArea");
+
+
+    if(question === ""){
+
+        response.innerHTML =
+        "<div class='message'>Please ask me a question first.</div>";
+
+        return;
+
+    }
+
+
+    response.innerHTML =
+    "<div class='message'>Great question! Let me break that down step by step for you.</div>";
+
+}
