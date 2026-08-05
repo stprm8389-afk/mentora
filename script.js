@@ -131,3 +131,10 @@ function askMentora() {
 
 
 }
+// Add smooth page transitions
+
+pages.forEach(page => {
+
+    page.style.transition = "opacity 0.3s ease";
+
+});
