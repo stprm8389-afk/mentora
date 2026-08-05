@@ -437,3 +437,54 @@ footer {
     margin:10px auto;
 
 }
+/* Hamburger Button Styling */
+
+.hamburger {
+
+    font-size: 28px;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+
+    background: #2563eb;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+}
+
+
+.hamburger:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+/* Top App Bar */
+
+.app-bar {
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:15px;
+
+    background:white;
+
+}
+
+
+.logo {
+
+    font-size:24px;
+    font-weight:bold;
+
+}
