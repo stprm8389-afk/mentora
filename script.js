@@ -7,47 +7,63 @@ const navButtons = document.querySelectorAll(".nav-btn");
 const pages = document.querySelectorAll(".page");
 
 
-navButtons.forEach(button => {
+function showPage(pageId) {
 
-    button.addEventListener("click", () => {
+    pages.forEach(page => {
 
-        const targetPage = button.getAttribute("data-page");
-
-
-        // Hide all pages
-
-        pages.forEach(page => {
-            page.classList.remove("active");
-        });
-
-
-
-        // Show selected page
-
-        const selectedPage = document.getElementById(targetPage);
-
-        if (selectedPage) {
-            selectedPage.classList.add("active");
-        }
-
-
-
-        // Update active button
-
-        navButtons.forEach(btn => {
-            btn.classList.remove("active");
-        });
-
-
-        button.classList.add("active");
+        page.classList.remove("active");
 
     });
+
+
+    const selectedPage = document.getElementById(pageId);
+
+
+    if (selectedPage) {
+
+        selectedPage.classList.add("active");
+
+    }
+
+
+    navButtons.forEach(button => {
+
+        button.classList.remove("active");
+
+        if (button.dataset.page === pageId) {
+
+            button.classList.add("active");
+
+        }
+
+    });
+
+}
+
+
+
+navButtons.forEach(button => {
+
+
+    button.addEventListener("click", function() {
+
+
+        const page = this.dataset.page;
+
+
+        showPage(page);
+
+
+    });
+
 
 });
 
 
 
+// Start on Home page
 
+showPage("home");
 
 // Mentora AI Tutor Demo
 
