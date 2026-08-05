@@ -1,91 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentora AI</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mentora AI</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header class="hero">
 
-    <nav class="navbar">
-        <div class="logo">
-            🧠 Mentora AI
-        </div>
+<nav class="navbar">
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#dashboard">Dashboard</a></li>
-            <li><a href="#tutor">AI Tutor</a></li>
-            <li><a href="#curriculum">Curriculum</a></li>
-            <li><a href="#lifeskills">Life Skills</a></li>
-            <li><a href="#teachers">Teachers</a></li>
-            <li><a href="#parents">Parents</a></li>
-        </ul>
-    </nav>
+<div class="logo">
+🧠 Mentora AI
+</div>
 
-    <section id="home" class="hero-content">
 
-        <h1>The Future of Learning</h1>
+<div class="nav-links">
 
-        <p>
-            Personalized AI education from Kindergarten through College.
-        </p>
+<button class="nav-btn active" data-page="home">
+Home
+</button>
 
-        <p>
-            Built to empower students, support teachers,
-            and keep parents connected.
-        </p>
+<button class="nav-btn" data-page="dashboard">
+Dashboard
+</button>
 
-        <button class="primary-button">
-            Start Learning
-        </button>
+<button class="nav-btn" data-page="tutor">
+AI Tutor
+</button>
 
-    </section>
+<button class="nav-btn" data-page="curriculum">
+Curriculum
+</button>
+
+<button class="nav-btn" data-page="lifeskills">
+Life Skills
+</button>
+
+<button class="nav-btn" data-page="teachers">
+Teachers
+</button>
+
+<button class="nav-btn" data-page="parents">
+Parents
+</button>
+
+</div>
+
+</nav>
+
+
+<section id="home" class="page active hero-content">
+
+<h1>
+The Future of Learning
+</h1>
+
+
+<p>
+Personalized AI education from Kindergarten through College.
+</p>
+
+
+<p>
+Built to empower students, support teachers,
+and keep parents connected.
+</p>
+
+
+<button class="primary-button nav-btn" data-page="dashboard">
+Start Learning
+</button>
+
+
+</section>
 
 </header>
 
+
+
 <main>
 
-<section id="dashboard" class="card">
 
-<h2>👋 Welcome Back!</h2>
+<section id="dashboard" class="page">
+
+<div class="card">
+
+<h2>
+👋 Welcome Back!
+</h2>
+
 
 <div class="dashboard-grid">
+
 
 <div class="info-card">
 <h3>Student</h3>
 <p>Alex Johnson</p>
 </div>
 
+
 <div class="info-card">
 <h3>Grade</h3>
 <p>8th Grade</p>
 </div>
+
 
 <div class="info-card">
 <h3>Learning Streak</h3>
 <p>🔥 5 Days</p>
 </div>
 
+
 <div class="info-card">
 <h3>Overall Progress</h3>
 <p>72%</p>
 </div>
 
+
 </div>
 
-</section>
+</div>
 
-<section class="card">
 
-<h2>📈 Learning Progress</h2>
+<div class="card">
+
+<h2>
+📈 Learning Progress
+</h2>
+
 
 <div class="progress-box">
+
 
 <p>Algebra</p>
 
@@ -95,6 +148,7 @@
 </div>
 </div>
 
+
 <p>Geometry</p>
 
 <div class="progress-bar">
@@ -102,6 +156,7 @@
 60%
 </div>
 </div>
+
 
 <p>Problem Solving</p>
 
@@ -111,13 +166,19 @@
 </div>
 </div>
 
+
 </div>
 
-</section>
+</div>
 
-<section class="card">
 
-<h2>🎯 Today's Goals</h2>
+
+<div class="card">
+
+<h2>
+🎯 Today's Goals
+</h2>
+
 
 <ul class="goals">
 
@@ -133,27 +194,34 @@
 
 </ul>
 
+</div>
+
+
 </section>
+<section id="tutor" class="page">
 
-<section id="tutor" class="card">
+<div class="card">
 
-<h2>🤖 AI Tutor</h2>
+<h2>
+🤖 AI Tutor
+</h2>
 
 <p>
 Ask any academic question and receive
 step-by-step explanations tailored to your learning style.
 </p>
 
+
 <input
 type="text"
 id="questionBox"
 placeholder="Example: Solve 3x + 4 = 16">
 
+
 <button onclick="askMentora()">
-
 Ask Mentora
-
 </button>
+
 
 <div id="responseArea" class="chat-box">
 
@@ -167,168 +235,401 @@ What would you like to learn today?
 
 </div>
 
-</section>
-<section id="curriculum" class="card">
 
-<h2>📚 K–College Curriculum</h2>
+</div>
+
+</section>
+
+
+
+
+<section id="curriculum" class="page">
+
+
+<div class="card">
+
+
+<h2>
+📚 K–College Curriculum
+</h2>
+
 
 <p>
 Mentora AI provides personalized learning from Kindergarten through College.
 Each subject adapts to the student's pace and skill level.
 </p>
 
+
+
 <div class="feature-grid">
 
-<div class="feature-card">
-<h3>🧮 Mathematics</h3>
-<p>Arithmetic, Algebra, Geometry, Calculus, Statistics, and more.</p>
-</div>
 
 <div class="feature-card">
-<h3>🔬 Science</h3>
-<p>Biology, Chemistry, Physics, Earth Science, and STEM.</p>
+
+<h3>
+🧮 Mathematics
+</h3>
+
+<p>
+Arithmetic, Algebra, Geometry, Calculus, Statistics, and more.
+</p>
+
 </div>
+
+
 
 <div class="feature-card">
-<h3>📖 English</h3>
-<p>Reading, Writing, Grammar, Literature, and Vocabulary.</p>
+
+<h3>
+🔬 Science
+</h3>
+
+<p>
+Biology, Chemistry, Physics, Earth Science, and STEM.
+</p>
+
 </div>
+
+
 
 <div class="feature-card">
-<h3>🌎 Social Studies</h3>
-<p>History, Geography, Government, Civics, and Economics.</p>
+
+<h3>
+📖 English
+</h3>
+
+<p>
+Reading, Writing, Grammar, Literature, and Vocabulary.
+</p>
+
 </div>
+
+
 
 <div class="feature-card">
-<h3>💻 Computer Science</h3>
-<p>Coding, AI, Cybersecurity, Robotics, and Digital Skills.</p>
+
+<h3>
+🌎 Social Studies
+</h3>
+
+<p>
+History, Geography, Government, Civics, and Economics.
+</p>
+
 </div>
+
+
 
 <div class="feature-card">
-<h3>🗣️ Languages</h3>
-<p>Learn multiple languages through AI conversations.</p>
-</div>
+
+<h3>
+💻 Computer Science
+</h3>
+
+<p>
+Coding, AI, Cybersecurity, Robotics, and Digital Skills.
+</p>
 
 </div>
+
+
+
+<div class="feature-card">
+
+<h3>
+🗣️ Languages
+</h3>
+
+<p>
+Learn multiple languages through AI conversations.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
-<section id="lifeskills" class="card">
 
-<h2>💰 Life Skills Academy</h2>
+
+
+
+<section id="lifeskills" class="page">
+
+
+<div class="card">
+
+
+<h2>
+💰 Life Skills Academy
+</h2>
+
 
 <p>
 Learning doesn't stop with school. Mentora AI prepares students for real life.
 </p>
 
+
+
 <div class="feature-grid">
 
-<div class="feature-card">
-<h3>💵 Budgeting</h3>
-<p>Create budgets, save money, and understand spending habits.</p>
-</div>
+
 
 <div class="feature-card">
-<h3>🏦 Personal Finance</h3>
-<p>Bank accounts, checking, savings, emergency funds, and financial planning.</p>
+
+<h3>
+💵 Budgeting
+</h3>
+
+<p>
+Create budgets, save money, and understand spending habits.
+</p>
+
 </div>
+
+
 
 <div class="feature-card">
-<h3>💳 Credit</h3>
-<p>Learn how credit scores work and how to build good credit responsibly.</p>
+
+<h3>
+🏦 Personal Finance
+</h3>
+
+<p>
+Bank accounts, checking, savings, emergency funds, and financial planning.
+</p>
+
 </div>
+
+
 
 <div class="feature-card">
-<h3>📄 Taxes</h3>
-<p>Understand tax basics, deductions, and filing concepts.</p>
+
+<h3>
+💳 Credit
+</h3>
+
+<p>
+Learn how credit scores work and how to build good credit responsibly.
+</p>
+
 </div>
+
+
 
 <div class="feature-card">
-<h3>📈 Investing</h3>
-<p>Stocks, bonds, retirement accounts, compound growth, and long-term planning.</p>
+
+<h3>
+📄 Taxes
+</h3>
+
+<p>
+Understand tax basics, deductions, and filing concepts.
+</p>
+
 </div>
+
+
 
 <div class="feature-card">
-<h3>💼 Careers & Entrepreneurship</h3>
-<p>Career exploration, interviewing, resumes, and starting a business.</p>
-</div>
+
+<h3>
+📈 Investing
+</h3>
+
+<p>
+Stocks, bonds, retirement accounts, compound growth, and long-term planning.
+</p>
 
 </div>
+
+
+
+<div class="feature-card">
+
+<h3>
+💼 Careers & Entrepreneurship
+</h3>
+
+<p>
+Career exploration, interviewing, resumes, and starting a business.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
-<section id="teachers" class="card">
 
-<h2>👨‍🏫 Teacher's Aid</h2>
+
+
+
+<section id="teachers" class="page">
+
+
+<div class="card">
+
+
+<h2>
+👨‍🏫 Teacher's Aid
+</h2>
+
 
 <ul class="goals">
+
 <li>AI Lesson Planner</li>
+
 <li>Automatic quiz generation</li>
+
 <li>Standards-aligned curriculum</li>
+
 <li>Accommodation suggestions for diverse learners</li>
+
 <li>Student progress dashboards</li>
+
 <li>Teacher remains in complete control of grading</li>
+
 </ul>
 
-</section>
 
-<section class="card">
+</div>
 
-<h2>📝 AI Lesson Planner</h2>
+
+<div class="card">
+
+
+<h2>
+📝 AI Lesson Planner
+</h2>
+
 
 <p>
 Generate daily lessons, weekly units, semester plans,
 or full-year curriculum with one click.
 </p>
 
-</section>
 
-<section class="card">
+</div>
 
-<h2>✅ AI Grading Assistant</h2>
+
+
+<div class="card">
+
+
+<h2>
+✅ AI Grading Assistant
+</h2>
+
 
 <p>
 Mentora AI can suggest grades, identify common mistakes,
 and generate feedback while teachers retain final approval.
 </p>
 
+
+</div>
+
+
+
 </section>
+<section id="parents" class="page">
 
-<section id="parents" class="card">
+<div class="card">
 
-<h2>👨‍👩‍👧 Parent Portal</h2>
+<h2>
+👨‍👩‍👧 Parent Portal
+</h2>
+
 
 <ul class="goals">
+
 <li>View grades</li>
+
 <li>Monitor learning streaks</li>
+
 <li>Track assignments</li>
+
 <li>Receive progress updates</li>
+
 <li>Celebrate achievements</li>
+
+
 </ul>
 
+
+</div>
+
+
 </section>
 
-<section class="card">
 
-<h2>🚀 The Future of Mentora AI</h2>
+
+
+
+<section id="future" class="page">
+
+
+<div class="card">
+
+
+<h2>
+🚀 The Future of Mentora AI
+</h2>
+
 
 <p>
-Mentora AI is designed to become a complete educational platform that supports students, teachers, schools, and families with personalized AI learning, practical life skills, and powerful classroom tools.
+Mentora AI is designed to become a complete educational platform
+that supports students, teachers, schools, and families with
+personalized AI learning, practical life skills, and powerful
+classroom tools.
 </p>
 
+
+</div>
+
+
 </section>
+
+
 
 </main>
 
+
+
+
 <footer>
 
-<p>© 2026 Mentora AI</p>
 
-<p>Learning for Life.</p>
+<p>
+© 2026 Mentora AI
+</p>
+
+
+<p>
+Learning for Life.
+</p>
+
 
 </footer>
 
+
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
