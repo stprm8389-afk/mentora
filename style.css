@@ -385,3 +385,55 @@ footer {
     margin: 20px;
 
 }
+/* App Menu */
+
+.app-bar {
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px;
+
+}
+
+
+.hamburger {
+
+    font-size:28px;
+    background:none;
+    border:none;
+    cursor:pointer;
+
+}
+
+
+
+.side-menu {
+
+    position:fixed;
+    top:0;
+    left:-260px;
+    width:240px;
+    height:100%;
+    padding-top:70px;
+    transition:0.3s;
+    z-index:1000;
+
+}
+
+
+.side-menu.open {
+
+    left:0;
+
+}
+
+
+
+.side-menu .nav-btn {
+
+    display:block;
+    width:90%;
+    margin:10px auto;
+
+}
