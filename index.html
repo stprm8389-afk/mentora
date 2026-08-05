@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,49 +12,71 @@
 
 </head>
 
+
 <body>
+
 
 <header class="hero">
 
+
 <nav class="navbar">
+
 
 <div class="logo">
 🧠 Mentora AI
 </div>
 
 
+
 <div class="nav-links">
 
-<button class="nav-btn" data-page="ai-tutor">
-AI Tutor
+
+<button class="nav-btn active" data-page="home">
+Home
 </button>
+
 
 <button class="nav-btn" data-page="dashboard">
 Dashboard
 </button>
 
+
+<button class="nav-btn" data-page="ai-tutor">
+AI Tutor
+</button>
+
+
 <button class="nav-btn" data-page="curriculum">
 Curriculum
 </button>
+
 
 <button class="nav-btn" data-page="life-skills">
 Life Skills
 </button>
 
+
 <button class="nav-btn" data-page="teacher-tools">
 Teachers
 </button>
+
 
 <button class="nav-btn" data-page="parent-portal">
 Parents
 </button>
 
+
 </div>
+
 
 </nav>
 
 
+
+
+
 <section id="home" class="page active hero-content">
+
 
 <h1>
 The Future of Learning
@@ -71,6 +94,7 @@ and keep parents connected.
 </p>
 
 
+
 <button class="primary-button nav-btn" data-page="dashboard">
 Start Learning
 </button>
@@ -78,141 +102,235 @@ Start Learning
 
 </section>
 
+
 </header>
+
+
 
 
 
 <main>
 
 
-<section id="dashboard">
+
+
+
+<section id="dashboard" class="page">
+
 
 <div class="card">
+
 
 <h2>
 👋 Welcome Back!
 </h2>
 
-...
-</div>
-
-</section>
 
 
 <div class="dashboard-grid">
 
 
 <div class="info-card">
-<h3>Student</h3>
-<p>Alex Johnson</p>
+
+<h3>
+Student
+</h3>
+
+<p>
+Alex Johnson
+</p>
+
 </div>
+
 
 
 <div class="info-card">
-<h3>Grade</h3>
-<p>8th Grade</p>
+
+<h3>
+Grade
+</h3>
+
+<p>
+8th Grade
+</p>
+
 </div>
+
 
 
 <div class="info-card">
-<h3>Learning Streak</h3>
-<p>🔥 5 Days</p>
+
+<h3>
+Learning Streak
+</h3>
+
+<p>
+🔥 5 Days
+</p>
+
 </div>
+
 
 
 <div class="info-card">
-<h3>Overall Progress</h3>
-<p>72%</p>
+
+<h3>
+Overall Progress
+</h3>
+
+<p>
+72%
+</p>
+
+</div>
+
+
+
 </div>
 
 
 </div>
 
-</div>
+
+
 
 
 <div class="card">
+
 
 <h2>
 📈 Learning Progress
 </h2>
 
 
+
 <div class="progress-box">
 
 
-<p>Algebra</p>
+
+<p>
+Algebra
+</p>
+
 
 <div class="progress-bar">
+
 <div class="progress-fill" style="width:75%;">
 75%
 </div>
+
 </div>
 
 
-<p>Geometry</p>
+
+
+
+<p>
+Geometry
+</p>
+
 
 <div class="progress-bar">
+
 <div class="progress-fill" style="width:60%;">
 60%
 </div>
+
 </div>
 
 
-<p>Problem Solving</p>
+
+
+
+<p>
+Problem Solving
+</p>
+
 
 <div class="progress-bar">
+
 <div class="progress-fill" style="width:85%;">
 85%
 </div>
+
 </div>
+
 
 
 </div>
 
+
 </div>
+
+
 
 
 
 <div class="card">
+
 
 <h2>
 🎯 Today's Goals
 </h2>
 
 
+
 <ul class="goals">
 
-<li>✅ Complete today's lesson</li>
 
-<li>✅ Finish 10 practice questions</li>
+<li>
+✅ Complete today's lesson
+</li>
 
-<li>✅ Ask Mentora AI a question</li>
 
-<li>✅ Review yesterday's mistakes</li>
+<li>
+✅ Finish 10 practice questions
+</li>
 
-<li>✅ Maintain learning streak</li>
+
+<li>
+✅ Ask Mentora AI a question
+</li>
+
+
+<li>
+✅ Review yesterday's mistakes
+</li>
+
+
+<li>
+✅ Maintain learning streak
+</li>
+
 
 </ul>
+
 
 </div>
 
 
-</section>
-<section id="ai-tutor">
-    <!-- AI Tutor content -->
+
 </section>
 
+
+<section id="ai-tutor" class="page">
+
+
 <div class="card">
+
 
 <h2>
 🤖 AI Tutor
 </h2>
 
+
+
 <p>
 Ask any academic question and receive
 step-by-step explanations tailored to your learning style.
 </p>
+
+
 
 
 <input
@@ -221,12 +339,16 @@ id="questionBox"
 placeholder="Example: Solve 3x + 4 = 16">
 
 
+
 <button onclick="askMentora()">
 Ask Mentora
 </button>
 
 
+
+
 <div id="responseArea" class="chat-box">
+
 
 <div class="message">
 
@@ -236,27 +358,36 @@ What would you like to learn today?
 
 </div>
 
+
 </div>
 
 
+
 </div>
+
+
 
 </section>
 
 
 
 
-<section id="curriculum">
-    <!-- Curriculum content -->
-</section>
+
+
+
+<section id="curriculum" class="page">
+
 
 
 <div class="card">
 
 
+
 <h2>
 📚 K–College Curriculum
 </h2>
+
+
 
 
 <p>
@@ -266,7 +397,12 @@ Each subject adapts to the student's pace and skill level.
 
 
 
+
+
 <div class="feature-grid">
+
+
+
 
 
 <div class="feature-card">
@@ -280,6 +416,8 @@ Arithmetic, Algebra, Geometry, Calculus, Statistics, and more.
 </p>
 
 </div>
+
+
 
 
 
@@ -297,6 +435,8 @@ Biology, Chemistry, Physics, Earth Science, and STEM.
 
 
 
+
+
 <div class="feature-card">
 
 <h3>
@@ -308,6 +448,8 @@ Reading, Writing, Grammar, Literature, and Vocabulary.
 </p>
 
 </div>
+
+
 
 
 
@@ -325,6 +467,8 @@ History, Geography, Government, Civics, and Economics.
 
 
 
+
+
 <div class="feature-card">
 
 <h3>
@@ -336,6 +480,8 @@ Coding, AI, Cybersecurity, Robotics, and Digital Skills.
 </p>
 
 </div>
+
+
 
 
 
@@ -353,6 +499,8 @@ Learn multiple languages through AI conversations.
 
 
 
+
+
 </div>
 
 
@@ -365,9 +513,10 @@ Learn multiple languages through AI conversations.
 
 
 
-<section id="life-skills">
-    <!-- Life Skills content -->
-</section>
+
+
+<section id="life-skills" class="page">
+
 
 
 <div class="card">
@@ -378,13 +527,19 @@ Learn multiple languages through AI conversations.
 </h2>
 
 
+
+
 <p>
 Learning doesn't stop with school. Mentora AI prepares students for real life.
 </p>
 
 
 
+
+
 <div class="feature-grid">
+
+
 
 
 
@@ -402,6 +557,8 @@ Create budgets, save money, and understand spending habits.
 
 
 
+
+
 <div class="feature-card">
 
 <h3>
@@ -413,6 +570,8 @@ Bank accounts, checking, savings, emergency funds, and financial planning.
 </p>
 
 </div>
+
+
 
 
 
@@ -430,6 +589,8 @@ Learn how credit scores work and how to build good credit responsibly.
 
 
 
+
+
 <div class="feature-card">
 
 <h3>
@@ -441,6 +602,8 @@ Understand tax basics, deductions, and filing concepts.
 </p>
 
 </div>
+
+
 
 
 
@@ -458,6 +621,8 @@ Stocks, bonds, retirement accounts, compound growth, and long-term planning.
 
 
 
+
+
 <div class="feature-card">
 
 <h3>
@@ -472,6 +637,8 @@ Career exploration, interviewing, resumes, and starting a business.
 
 
 
+
+
 </div>
 
 
@@ -479,14 +646,7 @@ Career exploration, interviewing, resumes, and starting a business.
 
 
 </section>
-
-
-
-
-
-<section id="teacher-tools">
-    <!-- Teacher Tools content -->
-</section>
+<section id="teacher-tools" class="page">
 
 
 <div class="card">
@@ -497,24 +657,48 @@ Career exploration, interviewing, resumes, and starting a business.
 </h2>
 
 
+
 <ul class="goals">
 
-<li>AI Lesson Planner</li>
 
-<li>Automatic quiz generation</li>
+<li>
+AI Lesson Planner
+</li>
 
-<li>Standards-aligned curriculum</li>
 
-<li>Accommodation suggestions for diverse learners</li>
+<li>
+Automatic quiz generation
+</li>
 
-<li>Student progress dashboards</li>
 
-<li>Teacher remains in complete control of grading</li>
+<li>
+Standards-aligned curriculum
+</li>
+
+
+<li>
+Accommodation suggestions for diverse learners
+</li>
+
+
+<li>
+Student progress dashboards
+</li>
+
+
+<li>
+Teacher remains in complete control of grading
+</li>
+
 
 </ul>
 
 
+
 </div>
+
+
+
 
 
 <div class="card">
@@ -532,6 +716,8 @@ or full-year curriculum with one click.
 
 
 </div>
+
+
 
 
 
@@ -554,45 +740,74 @@ and generate feedback while teachers retain final approval.
 
 
 </section>
-<section id="parent-portal">
-    <!-- Parent Portal content -->
-</section>
+
+
+
+
+
+
+
+<section id="parent-portal" class="page">
+
+
 
 <div class="card">
+
 
 <h2>
 👨‍👩‍👧 Parent Portal
 </h2>
 
 
+
 <ul class="goals">
 
-<li>View grades</li>
 
-<li>Monitor learning streaks</li>
+<li>
+View grades
+</li>
 
-<li>Track assignments</li>
 
-<li>Receive progress updates</li>
+<li>
+Monitor learning streaks
+</li>
 
-<li>Celebrate achievements</li>
+
+<li>
+Track assignments
+</li>
+
+
+<li>
+Receive progress updates
+</li>
+
+
+<li>
+Celebrate achievements
+</li>
+
 
 
 </ul>
 
 
+
 </div>
 
 
+
 </section>
 
 
 
 
 
-<section id="future-vision">
-    <!-- Future Vision content -->
-</section>
+
+
+
+<section id="future-vision" class="page">
+
 
 
 <div class="card">
@@ -603,6 +818,8 @@ and generate feedback while teachers retain final approval.
 </h2>
 
 
+
+
 <p>
 Mentora AI is designed to become a complete educational platform
 that supports students, teachers, schools, and families with
@@ -611,14 +828,21 @@ classroom tools.
 </p>
 
 
+
 </div>
+
 
 
 </section>
 
 
 
+
+
 </main>
+
+
+
 
 
 
@@ -640,9 +864,13 @@ Learning for Life.
 
 
 
+
+
 <script src="script.js"></script>
 
 
+
 </body>
+
 
 </html>
