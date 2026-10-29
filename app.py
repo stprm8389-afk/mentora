@@ -25,6 +25,9 @@ def init_db():
 def home():
     return send_from_directory(".", "index.html")
 
+@app.route("/signin")
+def signin():
+    return send_from_directory(".", "login.html")
 @app.route("/style.css")
 def css():
     return send_from_directory(".", "style.css")
